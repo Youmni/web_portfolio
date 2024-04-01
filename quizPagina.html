@@ -3,9 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quizley</title>
+    <link rel="icon" type="image/jpg" href="photos/quiz.jpg">
+    <link rel="stylesheet" href="css/quizPagina.css">
 </head>
 <body>
-    
+       
+    <header class="header">
+        <h1 class="titel-header"><a href="quizHome.html">Quizley</a></h1>
+        <nav class="nav-header">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Quizes</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="body">
+        <section class="sidebar">
+           <form id="categorie-form">
+            <h3>Kies een categorie:</h3>
+            <input type="radio" id="category-9" name="category" value="knowledge">
+            <label for="category-9">Algemene kennis</label><br>
+
+            <input type="radio" id="category-10" name="category" value="books">
+            <label for="category-10">Boeken</label><br>
+
+            <input type="radio" id="category-11" name="category" value="film">
+            <label for="category-11">Film</label><br>
+
+            <input type="radio" id="category-12" name="category" value="music">
+            <label for="category-12">Muziek</label><br>
+
+            <input type="radio" id="category-13" name="category" value="theater">
+            <label for="category-13">Theater</label><br>
+
+            <input type="radio" id="category-14" name="category" value="television">
+            <label for="category-14">Televisie</label><br>
+
+            <input type="radio" id="category-15" name="category" value="videogames">
+            <label for="category-15">Videospellen</label><br>
+
+            <input type="radio" id="category-16" name="category" value="games">
+            <label for="category-16">Bordspellen</label><br>
+
+            <input type="radio" id="category-17" name="category" value="nature">
+            <label for="category-17">Wetenschap en natuur</label><br>
+
+            <input type="radio" id="category-18" name="category" value="computers">
+            <label for="category-18">Wetenschap: Computers</label><br>
+
+            <input type="radio" id="category-19" name="category" value="math">
+            <label for="category-19">Wetenschap: Wiskunde</label><br>
+
+            <input type="radio" id="category-20" name="category" value="mythodology">
+            <label for="category-20">Mythologie</label><br>
+
+            <input type="radio" id="category-21" name="category" value="sport">
+            <label for="category-21">Sport</label><br>
+
+            <input type="radio" id="category-22" name="category" value="geographics">
+            <label for="category-22">Geografie</label><br>
+
+            <input type="radio" id="category-23" name="category" value="history">
+            <label for="category-23">Geschiedenis</label><br>
+
+            <input type="radio" id="category-24" name="category" value="politics">
+            <label for="category-24">Politiek</label><br>
+
+            <input type="radio" id="category-25" name="category" value="art">
+            <label for="category-25">Kunst</label><br>
+
+            <input type="radio" id="category-26" name="category" value="celebrities">
+            <label for="category-26">Beroemdheden</label><br>
+
+            <input type="radio" id="category-27" name="category" value="animals">
+            <label for="category-27">Dieren</label><br>
+
+            <input type="radio" id="category-28" name="category" value="transporation">
+            <label for="category-28">Voertuigen</label><br>
+
+            <input type="radio" id="category-29" name="category" value="comic book">
+            <label for="category-29">Stripboeken</label><br>
+
+            <input type="radio" id="category-30" name="category" value="cartoons">
+            <label for="category-30">Cartoons en animatie</label><br>
+
+            <input type="reset" id="reset-categorie" value="Reset">
+           </form>
+        </section>
+
+        <section class="cards" id="cards">
+
+        </section>
+    </div>
+
+    <script src="js/quizData.js"></script>
 </body>
 </html>

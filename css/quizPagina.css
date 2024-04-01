@@ -1,0 +1,95 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #a7c6e7;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: #013160;
+    color: white;
+    box-shadow: 0px 0px 10px rgb(98, 98, 98);
+}
+.nav-header ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+.nav-header ul a{
+    text-decoration: none;
+    color: white;
+}
+.titel-header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.titel-header a{
+    text-decoration: none;
+    color: white;
+}
+.sidebar{
+    border: 1px solid rgba(247, 247, 247, 0.553);
+    width: 15rem;
+    box-shadow: 0 0 6px grey;
+}
+.sidebar label{
+    padding: 1.5rem;
+}
+.body{
+    display: flex;
+}
+.sidebar {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.sidebar h3{
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.sidebar label{
+    display: inline-block;
+}
+
+.sidebar input[type="reset"] {
+    background-color: #091522;
+    color: #ffffff;
+    border: none;
+    padding: 12px 6.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar input, .sidebar label {
+    line-height: 5px;
+}
+
+.sidebar input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+.sidebar input[type="reset"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(180, 197, 216, 0.5);
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.individueleKaart{
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    background-color: #c9bfd1;
+    width: 20rem;
+    height: auto;
+}
+.individueleKaart img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 85%;
+}
