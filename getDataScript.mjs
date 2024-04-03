@@ -3,24 +3,13 @@ async function fetchData(url) {
         let response = await fetch(url);
         let data = await response.json();
 
-        let questions = {};
-        for(let i = 0; i < data.results.length; i++) {
-            questions[`question${i + 1}`] = {
-                type: data.results[i].type,
-                difficulty: data.results[i].difficulty,
-                question: data.results[i].question,
-                correct_answer: data.results[i].correct_answer,
-                incorrect_answers: data.results[i].incorrect_answers
-            };
-        }
-        
-        return questions;
+        return data;
     } catch (error) {
         console.error("Error fetching data:", error);
     }
 }
 // easy  medium    hard
-fetchData("https://opentdb.com/api.php?amount=10&category=32&difficulty=hard&type=multiple")
-    .then(data => console.log(data))
+fetchData("https://api.unsplash.com/search/photos?query=computers&client_id=zj8ISMmd3gz5xJRIin98bhscoGqn1iFsO21vvTF4Zlg&width=400&height=400")
+    .then(data => console.log(data.results[0].urls.full))
     .catch(error => console.error(error));
 
