@@ -1,106 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quizley</title>
-    <link rel="icon" type="image/jpg" href="photos/quiz.jpg">
-    <link rel="stylesheet" href="css/quizPagina.css">
-</head>
-<body>
+    <link rel="icon" type="image/jpg" href="photos/quiz.jpg" />
+    <link rel="stylesheet" href="css/quizPagina.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="header">
-        <div class="login"><img src="photos/inloggen7.png" alt="inloggen"></div>
-        <h1 class="titel-header"><a href="quizHome.html">Quizley</a></h1>
-        <nav class="nav-header">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Quizes</a></li>
-                <li><a href="">About us</a></li>
-                <li><a href="">Help</a></li>
-            </ul>
-        </nav>
-        
-        
-        
+      <a href="profile.html" class="login"
+        ><img src="photos/inloggen7.png" alt="inloggen"
+      /></a>
+      <h1 class="titel-header"><a href="quizPagina.html">Quizley</a></h1>
+      <nav class="nav-header">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Quizes</a></li>
+          <li><a href="">About us</a></li>
+          <li><a href="">FAQ</a></li>
+        </ul>
+      </nav>
     </header>
 
     <div class="body">
-        <section class="sidebar">
-           <form id="categorie-form">
-            <h3>Choose a category:</h3>
+      <section class="sidebar">
+        <form id="categorie-form">
+          <h3>Choose a category:</h3>
 
-            <input type="radio" id="category-1" name="category" value="General Knowledge" key="category1">
-            <label for="category-1">General Knowledge</label><br>
-            
-            <input type="radio" id="category-2" name="category" value="Books" key="category2">
-            <label for="category-2">Books</label><br>
-            
-            <input type="radio" id="category-3" name="category" value="Movies" key="category3">
-            <label for="category-3">Movies</label><br>
-            
-            <input type="radio" id="category-4" name="category" value="Music" key="category4">
-            <label for="category-4">Music</label><br>
-            
-            <input type="radio" id="category-6" name="category" value="Television" key="category6">
-            <label for="category-6">Television</label><br>
-            
-            <input type="radio" id="category-7" name="category" value="Video Games" key="category7">
-            <label for="category-7">Video Games</label><br>
-            
-            <input type="radio" id="category-8" name="category" value="Board Games" key="category8">
-            <label for="category-8">Board Games</label><br>
-            
-            <input type="radio" id="category-9" name="category" value="natuur" key="category9">
-            <label for="category-9">Science & Nature</label><br>
-            
-            <input type="radio" id="category-10" name="category" value="Science: Computers" key="category10">
-            <label for="category-10">Science: Computers</label><br>
-            
-            <input type="radio" id="category-11" name="category" value="Science: Mathematics" key="category11">
-            <label for="category-11">Science: Mathematics</label><br>
-            
-            <input type="radio" id="category-12" name="category" value="Mythology" key="category12">
-            <label for="category-12">Mythology</label><br>
-            
-            <input type="radio" id="category-13" name="category" value="Sports" key="category13">
-            <label for="category-13">Sports</label><br>
-            
-            <input type="radio" id="category-15" name="category" value="History" key="category15">
-            <label for="category-15">History</label><br>
-            
-            <input type="radio" id="category-16" name="category" value="Politics" key="category16">
-            <label for="category-16">Politics</label><br>
-            
-            <input type="radio" id="category-18" name="category" value="Celebrities" key="category18">
-            <label for="category-18">Celebrities</label><br>
-            
-            <input type="radio" id="category-19" name="category" value="Animals" key="category19">
-            <label for="category-19">Animals</label><br>
-            
-            <input type="radio" id="category-20" name="category" value="Vehicles" key="category20">
-            <label for="category-20">Vehicles</label><br>
-            
-            <input type="radio" id="category-21" name="category" value="Comic Books" key="category21">
-            <label for="category-21">Comic Books</label><br>
+          <input
+            type="radio"
+            id="category-0"
+            name="category"
+            value="Random"
+            key="category0"
+            hidden
+            checked
+          />
 
-            <input type="radio" id="category-23" name="category" value="Japanese Anime & Manga" key="category23">
-            <label for="category-23">Anime & Manga's</label><br>
-            
-            <input type="radio" id="category-24" name="category" value="Cartoons & Animations" key="category24">
-            <label for="category-24">Cartoons & Animations</label><br>
-            
 
-            
-            <input type="reset" id="reset-categorie" value="Reset">
-           </form>
-        </section>
+          <input
+            type="radio"
+            id="category-1"
+            name="category"
+            value="General Knowledge"
+            key="category1"
+          />
+          <label for="category-1">General Knowledge</label><br />
 
-        <section class="cards" id="cards">
+          <input
+            type="radio"
+            id="category-2"
+            name="category"
+            value="Books"
+            key="category2"
+          />
+          <label for="category-2">Books</label><br />
 
-        </section>
+          <input
+            type="radio"
+            id="category-3"
+            name="category"
+            value="Movies"
+            key="category3"
+          />
+          <label for="category-3">Movies</label><br />
+
+          <input
+            type="radio"
+            id="category-4"
+            name="category"
+            value="Music"
+            key="category4"
+          />
+          <label for="category-4">Music</label><br />
+
+          <input
+            type="radio"
+            id="category-6"
+            name="category"
+            value="Television"
+            key="category6"
+          />
+          <label for="category-6">Television</label><br />
+
+          <input
+            type="radio"
+            id="category-7"
+            name="category"
+            value="Video Games"
+            key="category7"
+          />
+          <label for="category-7">Video Games</label><br />
+
+          <input
+            type="radio"
+            id="category-8"
+            name="category"
+            value="Board Games"
+            key="category8"
+          />
+          <label for="category-8">Board Games</label><br />
+
+          <input
+            type="radio"
+            id="category-9"
+            name="category"
+            value="natuur"
+            key="category9"
+          />
+          <label for="category-9">Science & Nature</label><br />
+
+          <input
+            type="radio"
+            id="category-10"
+            name="category"
+            value="Science: Computers"
+            key="category10"
+          />
+          <label for="category-10">Science: Computers</label><br />
+
+          <input
+            type="radio"
+            id="category-11"
+            name="category"
+            value="Science: Mathematics"
+            key="category11"
+          />
+          <label for="category-11">Science: Mathematics</label><br />
+
+          <input
+            type="radio"
+            id="category-12"
+            name="category"
+            value="Mythology"
+            key="category12"
+          />
+          <label for="category-12">Mythology</label><br />
+
+          <input
+            type="radio"
+            id="category-13"
+            name="category"
+            value="Sports"
+            key="category13"
+          />
+          <label for="category-13">Sports</label><br />
+
+          <input
+            type="radio"
+            id="category-15"
+            name="category"
+            value="History"
+            key="category15"
+          />
+          <label for="category-15">History</label><br />
+
+          <input
+            type="radio"
+            id="category-16"
+            name="category"
+            value="Politics"
+            key="category16"
+          />
+          <label for="category-16">Politics</label><br />
+
+          <input
+            type="radio"
+            id="category-19"
+            name="category"
+            value="Animals"
+            key="category19"
+          />
+          <label for="category-19">Animals</label><br />
+
+          <input
+            type="radio"
+            id="category-20"
+            name="category"
+            value="Vehicles"
+            key="category20"
+          />
+          <label for="category-20">Vehicles</label><br />
+
+          <input
+            type="radio"
+            id="category-21"
+            name="category"
+            value="Comic Books"
+            key="category21"
+          />
+          <label for="category-21">Comic Books</label><br />
+
+          <input
+            type="radio"
+            id="category-23"
+            name="category"
+            value="Japanese Anime & Manga"
+            key="category23"
+          />
+          <label for="category-23">Anime & Manga's</label><br />
+
+          <input
+            type="radio"
+            id="category-24"
+            name="category"
+            value="Cartoons & Animations"
+            key="category24"
+          />
+          <label for="category-24">Cartoons & Animations</label><br />
+
+          <input type="reset" id="reset-categorie" value="Reset" />
+        </form>
+      </section>
+
+      <section class="cards" id="cards"></section>
     </div>
 
     <script src="js/quizData.js" type="module"></script>
-
-</body>
+  </body>
 </html>

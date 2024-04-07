@@ -378,7 +378,7 @@ const data = {
         difficulty: "easy",
         question: "Which candy is NOT made by Mars?",
         correct_answer: "Almond Joy",
-        incorrect_answers: ["M&amp;M&#039;s", "Twix", "Snickers"],
+        incorrect_answers: ["M&M&'s", "Twix", "Snickers"],
       },
       question48: {
         type: "multiple",
@@ -686,7 +686,7 @@ const data = {
     difficulty: "hard",
     question: "Which one of these Swedish companies was founded in 1943?",
     correct_answer: "IKEA",
-    incorrect_answers: ["H &amp; M", "Lindex", "Clas Ohlson"],
+    incorrect_answers: ["H & M", "Lindex", "Clas Ohlson"],
   },
   question15: {
     type: "multiple",
@@ -2326,11 +2326,11 @@ const data = {
         difficulty: "hard",
         question:
           "In the 1974 Christmas flick &quot;The Year Without a Santa Claus,&quot; what are the names of the two elves who help Mrs. Claus save Christmas?",
-        correct_answer: "Jingle &amp; Jangle",
+        correct_answer: "Jingle & Jangle",
         incorrect_answers: [
-          "Buddy &amp; Bobby",
-          "Holly &amp; Jolly",
-          "Snowflake &amp; Icicle",
+          "Buddy & Bobby",
+          "Holly & Jolly",
+          "Snowflake & Icicle",
         ],
       },
       question28: {
@@ -2654,7 +2654,7 @@ const data = {
         type: 'multiple',
         difficulty: 'medium',
         question: 'What was The Velvet Underground&#039;s first album called?',
-        correct_answer: 'The Velvet Underground &amp; Nico',
+        correct_answer: 'The Velvet Underground & Nico',
         incorrect_answers: [ 'Loaded', 'The Velvet Underground', 'White Light / White Heat' ]
       },
       question20: {
@@ -2674,7 +2674,7 @@ const data = {
       question2: {
         type: 'multiple',
         difficulty: 'hard',
-        question: 'Which of these is NOT a song featured on the Lockjaw EP released in 2013 by Flume &amp; Chet Faker?',
+        question: 'Which of these is NOT a song featured on the Lockjaw EP released in 2013 by Flume & Chet Faker?',
         correct_answer: 'Left Alone',
         incorrect_answers: [
           'What About Us',
@@ -3684,7 +3684,7 @@ const data = {
         correct_answer: 'Sonic the Hedgehog 3',
         incorrect_answers: [
           'Sonic the Hedgehog 2',
-          'Sonic &amp; Knuckles',
+          'Sonic & Knuckles',
           'Sonic Adventure'
         ]
       },
@@ -4002,7 +4002,7 @@ const data = {
         question: 'Which game was exclusive to Dreamcast?',
         correct_answer: 'Pen Pen TriIcelon',
         incorrect_answers: [
-          'Sylvester &amp; Tweety in Cagey Capers',
+          'Sylvester & Tweety in Cagey Capers',
           'Perfect Dark',
           'Tetrisphere'
         ]
@@ -4072,12 +4072,12 @@ const data = {
       question6: {
         type: 'multiple',
         difficulty: 'easy',
-        question: 'Which one of these is not a real game in the Dungeons &amp; Dragons series?',
-        correct_answer: 'Extreme Dungeons &amp; Dragons',
+        question: 'Which one of these is not a real game in the Dungeons & Dragons series?',
+        correct_answer: 'Extreme Dungeons & Dragons',
         incorrect_answers: [
-          'Advanced Dungeons &amp; Dragons',
-          'Dungeons &amp; Dragons 3.5th edition',
-          'Advanced Dungeons &amp; Dragons 2nd edition'
+          'Advanced Dungeons & Dragons',
+          'Dungeons & Dragons 3.5th edition',
+          'Advanced Dungeons & Dragons 2nd edition'
         ]
       },
       question7: {
@@ -4269,7 +4269,7 @@ const data = {
         type: 'multiple',
         difficulty: 'easy',
         question: 'Who is the chemical element Curium named after?',
-        correct_answer: 'Marie &amp; Pierre Curie',
+        correct_answer: 'Marie & Pierre Curie',
         incorrect_answers: [ 'The Curiosity Rover', 'Curious George', 'Stephen Curry' ]
       },
       question3: {
@@ -5731,7 +5731,7 @@ const data = {
       question7: {
         type: 'multiple',
         difficulty: 'easy',
-        question: 'Which Greek &amp; Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?',
+        question: 'Which Greek & Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?',
         correct_answer: 'Apollo',
         incorrect_answers: [ 'Aphrodite', 'Artemis', 'Athena' ]
       },
@@ -6720,11 +6720,11 @@ const data = {
         type: 'multiple',
         difficulty: 'medium',
         question: 'Which two modern-day countries used to be known as the region of Rhodesia between the 1890s and 1980?',
-        correct_answer: 'Zambia &amp; Zimbabwe',
+        correct_answer: 'Zambia & Zimbabwe',
         incorrect_answers: [
-          'Togo &amp; Benin',
-          'Lesotho &amp; Swaziland',
-          'Rwanda &amp; Burundi'
+          'Togo & Benin',
+          'Lesotho & Swaziland',
+          'Rwanda & Burundi'
         ]
       },
       question34: {
@@ -7720,7 +7720,7 @@ const data = {
         difficulty: 'medium',
         question: 'The minigun was designed in 1960 by which manufacturer.',
         correct_answer: 'General Electric',
-        incorrect_answers: [ 'Colt Firearms', 'Heckler &amp; Koch', 'Sig Sauer' ]
+        incorrect_answers: [ 'Colt Firearms', 'Heckler & Koch', 'Sig Sauer' ]
       },
       question19: {
         type: 'multiple',
@@ -8712,8 +8712,8 @@ const data = {
         type: 'multiple',
         difficulty: 'hard',
         question: 'What kind of train was Stepney, a train on the Bluebell Railway notable for his appearance in &quot;The Railway Series&quot;?',
-        correct_answer: 'LB&amp;SCR A1X',
-        incorrect_answers: [ 'LB&amp;SCR E2', 'LB&amp;SCR J1', 'LB&amp;SCR D1' ]
+        correct_answer: 'LB&SCR A1X',
+        incorrect_answers: [ 'LB&SCR E2', 'LB&SCR J1', 'LB&SCR D1' ]
       },
       question2: {
         type: 'multiple',

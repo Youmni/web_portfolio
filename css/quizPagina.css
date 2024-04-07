@@ -13,6 +13,178 @@ body {
   box-shadow: 0px 0px 10px rgb(98, 98, 98);
   position: relative;
 }
+.first-message{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 5rem;
+    text-align: center;
+    background-color: #d9d5d5b0;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+}
+.rain1 {
+  position: relative;
+  width: 20px; 
+  height: 40px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.rain1::before {
+  content: "";
+  position: absolute;
+  width: 20px; 
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(135, 188, 241);
+  top: -30px;
+  right: -150px;
+  animation: falling-raindrop 1s linear infinite;
+}
+
+@keyframes falling-raindrop {
+  0% {
+    transform: translateY(-30px) scale(1);
+  }
+  100% {
+    transform: translateY(100vh) scale(0.2);
+    opacity: 0;
+  }
+}
+
+.rain2 {
+  position: relative;
+  width: 20px; 
+  height: 40px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.rain2::before {
+  content: "";
+  position: absolute;
+  width: 20px; 
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(135, 188, 241);
+  top: -30px;
+  right: -320px;
+  animation: falling-raindrop2 1s linear infinite;
+}
+
+@keyframes falling-raindrop2 {
+  0% {
+    transform: translateY(-30px) scale(1);
+  }
+  100% {
+    transform: translateY(100vh) scale(0.2);
+    opacity: 0;
+  }
+}
+.defaultContainerCategorie{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #091522;
+}
+.rain3 {
+  position: relative;
+  width: 20px; 
+  height: 40px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.rain3::before {
+  content: "";
+  position: absolute;
+  width: 20px; 
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(135, 188, 241);
+  top: -30px;
+  right: -250px;
+  animation: falling-raindrop3 1s linear infinite;
+}
+
+@keyframes falling-raindrop3 {
+  0% {
+    transform: translateY(-30px) scale(1);
+  }
+  100% {
+    transform: translateY(100vh) scale(0.2);
+    opacity: 0;
+  }
+}
+
+.rain4 {
+  position: relative;
+  width: 20px; 
+  height: 40px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.rain4::before {
+  content: "";
+  position: absolute;
+  width: 20px; 
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(135, 188, 241);
+  top: -30px;
+  right: -300px;
+  animation: falling-raindrop4 1s linear infinite;
+}
+
+@keyframes falling-raindrop4 {
+  0% {
+    transform: translateY(-30px) scale(1);
+  }
+  100% {
+    transform: translateY(100vh) scale(0.2);
+    opacity: 0;
+  }
+}
+
+
+.rain5 {
+  position: relative;
+  width: 20px; 
+  height: 40px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.rain5::before {
+  content: "";
+  position: absolute;
+  width: 20px; 
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(135, 188, 241);
+  top: -30px;
+  right: -400px;
+  animation: falling-raindrop5 1s linear infinite;
+}
+
+@keyframes falling-raindrop5 {
+  0% {
+    transform: translateY(-30px) scale(1);
+  }
+  100% {
+    transform: translateY(100vh) scale(0.2);
+    opacity: 0;
+  }
+}
 .nav-header ul {
   display: flex;
   list-style: none;
@@ -111,6 +283,7 @@ body {
   width: 20rem;
   height: 24rem;
   cursor: pointer;
+  position: relative;
 }
 .individueleKaart img {
   border-top-left-radius: 10px;
@@ -125,7 +298,7 @@ body {
 }
 
 .kaart {
-    position: relative;
+
 }
 
 .difficulty {
