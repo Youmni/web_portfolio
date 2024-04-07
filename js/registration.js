@@ -139,7 +139,7 @@ window.onload = function () {
         interestsParagraf.textContent = "";
     }
 
-    function createUser(username, email) {
+    async function createUser(username, email) {
         let selectedInterests = document.querySelectorAll('input[type="checkbox"]:checked');
         let interestsArray = [];
         selectedInterests.forEach(function (interest) {
@@ -147,9 +147,9 @@ window.onload = function () {
         });
         let user = new User(username.value, email.value, interestsArray);
         generateHash(password.value).then(hash => {
-            localStorage.setItem("password", JSON.stringify(hash));
+            user.setPassword(hash);
+            localStorage.setItem("user", JSON.stringify(user));
         }).catch(error => console.error(error));
-        localStorage.setItem("user", JSON.stringify(user));
     }
 
     async function generateHash(message) {
@@ -161,11 +161,14 @@ window.onload = function () {
         return hashHex;
     }
 
-    function User(username, email, interests) {
+    function User(username, email, interests,) {
         this.username = username;
         this.email = email;
         this.interests = interests;
         this.login = false;
+        this.setPassword = function (password) {
+            this.password = password;
+        };
         //this.setPersonalDetails = function(details){
         //  [this.username,this.email,this.interests] = details;
         //};

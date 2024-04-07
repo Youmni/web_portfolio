@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #a7c6e7;
+  position: relative;
 }
 .header {
   display: flex;
@@ -15,7 +16,7 @@ body {
 }
 .first-message{
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 55%;
     transform: translate(-50%, -50%);
     font-size: 2rem;
@@ -23,9 +24,37 @@ body {
     color: rgb(0, 0, 0);
     padding: 5rem;
     text-align: center;
-    background-color: #d9d5d5b0;
+    background-color: #faf7f7b0;
     border-radius: 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.first-message-noLogin{
+  position: absolute;
+  top: 30%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+  padding: 2rem;
+  text-align: center;
+  background-color: #faf7f7b0;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+#btn-noLogin{
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #0467d0; 
+  color: #fff; 
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
 
 }
 .rain1 {
@@ -201,7 +230,7 @@ body {
     right: 5rem;
     cursor: pointer;
 }
-.login img{
+img.login{
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -275,7 +304,7 @@ body {
 }
 .individueleKaart {
   border: 1px solid rgba(0, 0, 0, 0.45);
-  box-shadow: 0 0 15px #4b75a5;
+  box-shadow: 0 0 15px #363636;
   text-align: center;
   font-size: 1.5rem;
   border-radius: 10px;

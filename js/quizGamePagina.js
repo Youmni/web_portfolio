@@ -234,12 +234,15 @@ console.log(JSON.parse(localStorage.getItem(`question${5}`)).incorrect_answers)
   function resetTimer() {
     timeLeft = 30;
     timerElement.textContent = timeLeft + "sec";
-    timerInterval = setInterval(updateTimer, 1000);
     clearInterval(timerInterval);
-
+    timerInterval = setInterval(updateTimer, 1000);
   }
+  
 
   quizInput(index);
   updateTimer();
-
+  let color = JSON.parse(localStorage.getItem("user")).backgroundColor;
+  document.body.style.backgroundColor = color;
+  document.getElementById("main").style.backgroundColor = color;
+  
 };

@@ -14,4 +14,8 @@ window.onload = function () {
     button.addEventListener("click", function () {
         window.location.href = "quizGamePagina.html";
     });
+
+    let color = JSON.parse(localStorage.getItem("user")).backgroundColor;
+    document.getElementById("main").style.backgroundColor = color;
+    document.body.style.backgroundColor = color;
 };

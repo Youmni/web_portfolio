@@ -7,17 +7,35 @@ window.onload = function () {
   let accessKey = "zj8ISMmd3gz5xJRIin98bhscoGqn1iFsO21vvTF4Zlg";
   let cards = document.getElementById("cards");
   let reset = document.getElementById("reset-categorie");
+  let profile = document.getElementById("profile");
   let geselecteerdInput;
   let geselecteerdeCategorie;
 
   //als er niets geselcteerd is maken we regen.
   cards.innerHTML =
-    "<p class='rain1'></p> <p class='rain2'></p> <p class='rain3'></p> <p class='rain4'></p><p class='rain5'></p><h1 class='first-message'>Kies een categorie om te kunnen quizen!! </h1>";
+    "<p class='rain1'></p> <p class='rain2'></p> <p class='rain3'></p> <p class='rain4'></p><p class='rain5'></p><h1 class='first-message'>Choose a category to start quizzing!</h1>";
 
+
+
+  profile.addEventListener("click", function () { 
+    if(localStorage.getItem("user") === null){
+     alert("You need to be logged in to see your profile!");
+    }
+    else{
+      window.location.href = "profile.html";
+    }
+  });
     //luisteren naar het change event voor als we van categorie veranderen.
   radioInputs.forEach(function (input) {
     input.addEventListener("change", () => {
-      if (input.checked) {
+      if(localStorage.getItem("user") === null){
+       cards.innerHTML = "<div class='first-message-noLogin'><h3>You need to be logged in to play a quiz!</h3><button id='btn-noLogin'>Login / Registrate</button></div>";
+        let btnNoLogin = document.getElementById("btn-noLogin");
+        btnNoLogin.addEventListener("click", function () {  
+          window.location.href = "login.html";
+        });
+      }
+      else if(input.checked) {
         geselecteerdInput = input.value;
         geselecteerdeCategorie = input.getAttribute("key");
         console.log(geselecteerdInput);
@@ -107,7 +125,7 @@ window.onload = function () {
 
 
   reset.addEventListener("click", function () {
-    cards.innerHTML = "<h2>Kies een categorie om te kunnen quizen!! </h2>";
+    cards.innerHTML = "<h2 class='first-message'>Choose a category to start quizzing!! </h2>";
   });
 
   // wordt gebruikt om de afbeeldingen op te halen.
@@ -162,7 +180,7 @@ window.onload = function () {
       sessionStorage.setItem("som1", som1);
       sessionStorage.setItem("som2", som2);
       sessionStorage.setItem("som3", som3);
-      localStorage.clear();
+      //localStorage.clear();
 
       let vragenReeks = checkForWhichQuestions(som1, som2, som3, kaartId);
 
@@ -275,5 +293,6 @@ window.onload = function () {
       }
       return vraagReeks;
   }
-  
+  let color = JSON.parse(localStorage.getItem("user")).backgroundColor;
+  document.body.style.backgroundColor = color;
 };

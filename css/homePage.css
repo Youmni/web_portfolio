@@ -1,0 +1,129 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    height: 100vh;
+    background: url(../photos/background-home13.avif);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: #013160;
+    color: white;
+    box-shadow: 0px 0px 10px rgb(98, 98, 98);
+    position: relative;
+  }
+  .nav-header ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+  }
+  .nav-header ul a {
+    text-decoration: none;
+    color: white;
+  }
+  .login{
+      border-radius: 50%;
+      position: absolute;
+      top: 1.4rem;
+      right: 5rem;
+      cursor: pointer;
+  }
+  .login img{
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 1px solid #000000;
+  }
+  
+  .titel-header {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  .titel-header a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .titel-main {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 3rem;
+}
+main{
+  font-family: "Inter", sans-serif;
+}
+
+.text-btn {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-main {
+    width: 70%;
+    text-align: center;
+}
+
+.btn-login {
+  margin-top: 4rem;
+  width: 20rem;
+  padding: 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #136b48;
+  color: white;
+  border: 1px solid #32533e;
+  cursor: pointer;
+}
+
+.btn-login a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-login:active {
+  transition: ease-in-out 0.3s;
+  transform: scale(0.9);
+}
+.testimonials{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  margin-top: 4rem;
+  font-family: "Reddit Mono", monospace;
+}
+.testimonial-block{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(228, 231, 233);
+  padding: 1rem;
+  border-radius: 15px;
+  width: 30%;
+}
+.stars{
+  color: rgb(226, 226, 99);
+  font-size: 2rem;
+}
+.footer{
+  position: fixed;
+  background-color: #4c6278;
+  color: white;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgb(98, 98, 98);
+  padding: 0.5rem 0;
+  bottom: 0;
+  left:0;
+  right: 0;
+}
