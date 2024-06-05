@@ -1,183 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quizley - Registration</title>
     <link rel="stylesheet" href="css/registration.css">
 </head>
+
 <body>
-<div class="wrapper">
-    <form class="form" id="form">
-        <div class="titel-container">
-        <h1>Quizley: <span>registration</span></h1>
-        <p id="form-succesfull"></p>
-        </div>
-        <div class="username-container">
-            <input
-                class="username whole-input"
-                id="username"
-                type="text"
-                minlength="4"
-                maxlength="20"
-                required
-                placeholder="Username"
-            />
-        </div>
-        <p id="username-check"></p>
+    <div class="wrapper">
+        <form class="form" id="form">
+            <div class="titel-container">
+                <h1>Quizley: <span>registration</span></h1>
+                <p id="form-succesfull"></p>
+            </div>
+            <div class="username-container">
+                <input class="username whole-input" id="username" type="text" minlength="4" maxlength="20" required
+                    placeholder="Username" />
+            </div>
+            <p id="username-check"></p>
 
-    <div class="email-container">
-        <input
-            class="email whole-input"
-            id="email"
-            type="email"
-            minlength="4"
-            maxlength="35"
-            required
-            placeholder="Email"
-        />
-    </div>
-    <p id="email-check"></p>
+            <div class="email-container">
+                <input class="email whole-input" id="email" type="email" minlength="4" maxlength="35" required
+                    placeholder="Email" />
+            </div>
+            <p id="email-check"></p>
 
-        <div class="password-container">
-            <input
-                class="password whole-input"
-                id="password"
-                type="password"
-                minlength="4"
-                maxlength="20"
-                required
-                placeholder="Password"
-            />
-        </div>
-        <p id="password-check"></p>
+            <div class="password-container">
+                <input class="password whole-input" id="password" type="password" minlength="4" maxlength="20" required
+                    placeholder="Password" />
+            </div>
+            <p id="password-check"></p>
 
-        <div class="password-repeat-container">
-            <input
-                class="password-repeat whole-input"
-                id="password-repeat"
-                type="password"
-                minlength="4"
-                maxlength="20"
-                required
-                placeholder="Repeat Password"
-            />
-        </div>
-         <p id="password-repeat-check"></p>
+            <div class="password-repeat-container">
+                <input class="password-repeat whole-input" id="password-repeat" type="password" minlength="4"
+                    maxlength="20" required placeholder="Repeat Password" />
+            </div>
+            <p id="password-repeat-check"></p>
 
-         <p class="interest-p">Choose your interests (select up to 3)</p><br>
-        <div class="interests-container">
-            <form id="interests-form">
-                <input
-                    class="interests whole-input"
-                    type="checkbox"
-                    id="category-1"
-                    name="interest"
-                    value="General Knowledge"
-                    key="category1"
-                />
-                <label for="category-1">General Knowledge</label><br />
+            <p class="interest-p">Choose your interests (select up to 3)</p><br>
+            <div class="interests-container">
+                <form id="interests-form">
+                    <input class="interests whole-input" type="checkbox" id="category-1" name="interest"
+                        value="General Knowledge" key="category1" />
+                    <label for="category-1">General Knowledge</label><br />
 
-                <input
-                    class="interests whole-input"
-                    type="checkbox"
-                    id="category-2"
-                    name="interest"
-                    value="Books"
-                    key="category2"
-                />
-                <label for="category-2">Books</label><br />
+                    <input class="interests whole-input" type="checkbox" id="category-2" name="interest" value="Books"
+                        key="category2" />
+                    <label for="category-2">Books</label><br />
 
-                <input
-                    class="interests whole-input"
-                    type="checkbox"
-                    id="category-3"
-                    name="interest"
-                    value="Movies"
-                    key="category3"
-                />
-                <label for="category-3">Movies</label><br />
+                    <input class="interests whole-input" type="checkbox" id="category-3" name="interest" value="Movies"
+                        key="category3" />
+                    <label for="category-3">Movies</label><br />
 
-                <input
-                    class="interests whole-input"
-                    type="checkbox"
-                    id="category-4"
-                    name="interest"
-                    value="Music"
-                    key="category4"
-                />
-                <label for="category-4">Music</label><br />
+                    <input class="interests whole-input" type="checkbox" id="category-4" name="interest" value="Music"
+                        key="category4" />
+                    <label for="category-4">Music</label><br />
 
-                <input
-                    class="interests whole-input"
-                    type="checkbox"
-                    id="category-5"
-                    name="interest"
-                    value="Television"
-                    key="category5"
-                />
-                <label for="category-5">Television</label><br />
+                    <input class="interests whole-input" type="checkbox" id="category-5" name="interest"
+                        value="Television" key="category5" />
+                    <label for="category-5">Television</label><br />
 
-                <input
-                    class="interests whole-input"
-                    type="checkbox"
-                    id="category-6"
-                    name="interest"
-                    value="Video Games"
-                    key="category6"
-                />
-                <label for="category-6">Video Games</label><br />
+                    <input class="interests whole-input" type="checkbox" id="category-6" name="interest"
+                        value="Video Games" key="category6" />
+                    <label for="category-6">Video Games</label><br />
 
-                <input
-                    class="interests whole-input"
-                    type="checkbox"
-                    id="category-7"
-                    name="interest"
-                    value="Board Games"
-                    key="category7"
-                />
-                <label for="category-7">Board Games</label><br />
+                    <input class="interests whole-input" type="checkbox" id="category-7" name="interest"
+                        value="Board Games" key="category7" />
+                    <label for="category-7">Board Games</label><br />
 
-                <input
-                    class="interests whole-input"
-                    type="checkbox"
-                    id="category-8"
-                    name="interest"
-                    value="Science & Nature"
-                    key="category8"
-                />
-                <label for="category-8">Science & Nature</label><br />
+                    <input class="interests whole-input" type="checkbox" id="category-8" name="interest"
+                        value="Science & Nature" key="category8" />
+                    <label for="category-8">Science & Nature</label><br />
 
-                <input
-                    class="interests whole-input"
-                    type="checkbox"
-                    id="category-9"
-                    name="interest"
-                    value="Science: Computers"
-                    key="category9"
-                />
-                <label for="category-9">Science: Computers</label><br />
+                    <input class="interests whole-input" type="checkbox" id="category-9" name="interest"
+                        value="Science: Computers" key="category9" />
+                    <label for="category-9">Science: Computers</label><br />
 
-                <input
-                    class="interests whole-input"
-                    type="checkbox"
-                    id="category-10"
-                    name="interest"
-                    value="Science: Mathematics"
-                    key="category10"
-                />
-                
-                <label for="category-10">Science: Mathematics</label><br />
+                    <input class="interests whole-input" type="checkbox" id="category-10" name="interest"
+                        value="Science: Mathematics" key="category10" />
+
+                    <label for="category-10">Science: Mathematics</label><br />
                 </form>
                 <p id="form-intresest"></p>
-                
-                <div class="submit-container">
-                <input type="submit" id="submit" value="submit" />
-                </div>
-        </div>
-    </form>
-</div>
 
-<script src="js/registration.js"></script>
+                <div class="submit-container">
+                    <input type="submit" id="submit" value="submit" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/registration.js"></script>
 </body>
+
 </html>

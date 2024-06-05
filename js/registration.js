@@ -39,7 +39,6 @@ window.onload = function () {
         if (test !== "") succes = false;
 
         test = checkWachtwoord();
-        updateResult(passwordParagraf, test);
         updateResult(passwordRepeatParagraf, test);
         if (test !== "") succes = false;
 
@@ -113,14 +112,6 @@ window.onload = function () {
         }
     }
 
-    // function checkGender(gender) {
-    //     if (gender.value === null || "") {
-    //         return "Please select a gender.";
-    //     } else {
-    //         return "";
-    //     }
-    // }
-
     function updateResult(element, message) {
         if (message) {
             element.textContent = message;
@@ -131,10 +122,9 @@ window.onload = function () {
         }
     }
 
-    function removeOnSuccess(userParagraf, emailParagraf, passwordParagraf, passwordRepeatParagraf, interestsParagraf) {
+    function removeOnSuccess(userParagraf, emailParagraf, passwordRepeatParagraf, interestsParagraf) {
         userParagraf.textContent = "";
         emailParagraf.textContent = "";
-        passwordParagraf.textContent = "";
         passwordRepeatParagraf.textContent = "";
         interestsParagraf.textContent = "";
     }
@@ -153,19 +143,19 @@ window.onload = function () {
     }
 
     async function generateHash(message) {
-        const encoder = new TextEncoder();
-        const data = encoder.encode(message);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+        const utf8 = new TextEncoder().encode(message);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', utf8);
         const hashArray = Array.from(new Uint8Array(hashBuffer));
-        const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+        const hashHex = hashArray
+          .map((bytes) => bytes.toString(16).padStart(2, '0'))
+          .join('');
         return hashHex;
-    }
+      }
 
-    function User(username, email, interests,) {
+    function User(username, email, interests) {
         this.username = username;
         this.email = email;
         this.interests = interests;
-        this.login = false;
         this.setPassword = function (password) {
             this.password = password;
         };

@@ -4,62 +4,6 @@ body {
     background-color: #a7c6e7;
     height: 100vh;
     overflow: hidden;
-  }
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    background-color: #013160;
-    color: white;
-    box-shadow: 0px 0px 10px rgb(98, 98, 98);
-    position: relative;
-  }
-  .nav-header ul {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-  }
-  .nav-header ul a {
-    text-decoration: none;
-    color: white;
-  }
-  .login{
-      border-radius: 50%;
-      position: absolute;
-      top: 1.4rem;
-      right: 5rem;
-      cursor: pointer;
-  }
-
-  .login img{
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      border: 1px solid #000000;
-  }
-  
-  .titel-header {
-    font-family: Georgia, "Times New Roman", Times, serif;
-  }
-  .titel-header a {
-    text-decoration: none;
-    color: white;
-  }
-  main {
-position: relative;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    background-color: #013160;
-    color: white;
-    box-shadow: 0px 0px 10px rgb(98, 98, 98);
-    position: relative;
-    height: 10%;
 }
 
 .main {
@@ -145,10 +89,8 @@ position: relative;
     background-color: rgb(115, 177, 148);
 }
 .container-container-header{
-
     display: flex;
     justify-content: center;
-
 }
 .container-header{
     width: 80%;
@@ -186,9 +128,209 @@ position: relative;
     display: flex;
     gap: 15px;
 }
+.end-quiz {
+    background: rgb(255, 255, 255);
+    padding: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgb(98, 98, 98);
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+.actions{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-back{
+    padding: 1rem 4rem;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid rgb(158, 158, 202);
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 1.3rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+.btn-results{
+    padding: 1rem 4rem;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid rgb(158, 158, 202);
+    background-color: rgb(0, 148, 57);
+    color: white;
+    font-size: 1.3rem;
+    margin-right: 2rem;
+    cursor: pointer;
+
+}
 .streak{
     padding: 1rem;
     background-color: azure;
     border-radius: 50%;
 }
+@media screen and (max-width: 600px) {
+    #score{
+        flex-wrap: wrap;
+    }
+    .action-btns{
+        max-width: 100%;
+    }
+    .option-container{
+        position: relative;
+    }
+    .btn-exit{
+        position: absolute;
+        left: 2rem; 
+        bottom: 0;
+        padding: 1rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 68, 0);
+        color: white;
+        font-size: 1rem; 
+        font-weight: bold;
+        border: 1px solid rgb(158, 158, 202);
+        cursor: pointer;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        margin: 0;
+    }
+    .btn-send{
+        position: absolute;
+        right: 2rem; 
+        bottom: 0;
+        padding: 1rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 217, 255);
+        color: white;
+        font-size: 1rem; 
+        font-weight: bold;
+        border: 1px solid rgb(121, 121, 255);
+        cursor: pointer;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        margin: 0;
+    }
 
+}
+@media screen and (max-width: 925px) {
+
+    .container-header{
+        width: 100%;
+        text-align: center;
+    }
+    .main{
+        position: relative;
+    }
+    .options{
+        width: 90%;
+    }
+    .action-btns{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        max-width: 100%;
+    }
+    .btn-exit{
+        padding: 1rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 68, 0);
+        color: white;
+        font-size: 1rem; 
+        font-weight: bold;
+        border: 1px solid rgb(158, 158, 202);
+        cursor: pointer;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        margin: 0;
+    }
+    .btn-send{
+        padding: 1rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 217, 255);
+        color: white;
+        font-size: 1rem; 
+        font-weight: bold;
+        border: 1px solid rgb(121, 121, 255);
+        cursor: pointer;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        margin: 0;
+    }
+    #music{
+        display: none;
+    }
+    #timer{
+        position: absolute;
+        bottom:0;
+        left: 40%;
+        right: 40%;
+        font-weight: bold;
+        background-color: rgb(0, 41, 92);
+        text-align: center;
+        border-radius: 15px;
+        margin: 0;
+    }
+    
+}
+@media screen and (max-width: 1075px) {
+    body{
+        overflow:visible;
+    }
+    .container-header{
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+    .option-container{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 60%;
+        gap: 0rem;
+    }
+    .options{
+        width: 90%;
+    }
+    .btn-exit{
+        border: 50%;
+    }
+    .btn-send{
+        border: 50%;
+    }
+    #music{
+        display: none;
+    }
+    #timer{
+        position: absolute;
+        bottom:0;
+        left: 40%;
+        right: 40%;
+        font-weight: bold;
+        background-color: rgb(0, 41, 92);
+        text-align: center;
+        border-radius: 15px;
+        margin: 0;
+    }
+}

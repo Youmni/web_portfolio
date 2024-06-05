@@ -2,20 +2,25 @@
 import data from "../data.js";
 
 window.onload = function () {
+
+  // self executing functie
+  (function(naam) {
+    console.log("De " + naam + " is geladen!");
+  })("javascript");
+
+
   //waarden ophalen.
-  let radioInputs = document.querySelectorAll(".sidebar input[type='radio']");
-  let accessKey = "zj8ISMmd3gz5xJRIin98bhscoGqn1iFsO21vvTF4Zlg";
-  let cards = document.getElementById("cards");
-  let reset = document.getElementById("reset-categorie");
-  let profile = document.getElementById("profile");
+  const radioInputs = document.querySelectorAll(".sidebar input[type='radio']");
+  const accessKey = "zj8ISMmd3gz5xJRIin98bhscoGqn1iFsO21vvTF4Zlg";
+  const cards = document.getElementById("cards");
+  const reset = document.getElementById("reset-categorie");
+  const profile = document.getElementById("profile");
   let geselecteerdInput;
   let geselecteerdeCategorie;
 
   //als er niets geselcteerd is maken we regen.
   cards.innerHTML =
-    "<p class='rain1'></p> <p class='rain2'></p> <p class='rain3'></p> <p class='rain4'></p><p class='rain5'></p><h1 class='first-message'>Choose a category to start quizzing!</h1>";
-
-
+    "<h1 class='first-message'><span></span></h1>";
 
   profile.addEventListener("click", function () { 
     if(localStorage.getItem("user") === null){
@@ -82,7 +87,7 @@ window.onload = function () {
             }
 
             // nadat we weten hoeveel kaarten we nodig hebben gaan we de kaarten maken.
-            for (let i = 0;i < Math.min(nodigeKaarten, imagesData.results.length);i++) {
+            for (let i = 0;i < nodigeKaarten;i++) {
               console.log(nodigeKaarten);
               createCard(
                 imagesData.results[i].urls.regular,
@@ -90,6 +95,7 @@ window.onload = function () {
                 i + 1,
                 geselecteerdeCategorie
               );
+              console.log("id:"+(i + 1));
             }
           })
           .catch((error) => {
@@ -98,27 +104,6 @@ window.onload = function () {
             );
           });
         }
-        // let firstKaart = document.querySelector(".individueleKaart");
-        // if (firstKaart) {
-        //   let categorie = firstKaart.getAttribute("key");
-        //   let lengte1 = Object.keys(data[categorie].easy).length;
-        //   let lengte2 = Object.keys(data[categorie].medium).length;
-        //   let lengte3 = Object.keys(data[categorie].hard).length;
-          
-        //   console.log(lengte1);
-        //   let difficulty = document.querySelectorAll(".difficulty");
-        //   console.log(difficulty[1].textContent = "easy")
-        
-        //   for (let i = 1; i <= lengte1 / 10; i++) {
-        //     difficulty[1].textContent = "easy";
-        //   }
-        //   for (let i = lengte1 / 10 + 1; i <= lengte2 / 10; i++) {
-        //     difficulty[i].textContent = "medium";
-        //   }
-        //   for (let i = lengte2 / 10 + 1; i <= lengte3 / 10; i++) {
-        //     difficulty[i].textContent = "hard";
-        //   }
-        // }
     });
   });
 
@@ -145,6 +130,7 @@ window.onload = function () {
 
   //wordt aangeroepen om een kaart te maken.
   function createCard(imageUrl, title, id, categorie) {
+    console.log(id)
     let kaart = document.createElement("figure");
     kaart.classList.add("individueleKaart");
 
@@ -158,12 +144,35 @@ window.onload = function () {
 
     difficulty.classList.add("difficulty");
 
+    // Kijken welke difficulty we moeten zeggen
+    let vragen1 = Object.keys(data[categorie.toLowerCase()].easy).length;
+    let vragen2 = Object.keys(data[categorie.toLowerCase()].medium).length;
+    let vragen3 = Object.keys(data[categorie.toLowerCase()].hard).length;
+    console.log(vragen3);
+
+    let difficultyReeks = checkForDifficulty(vragen1, vragen2, vragen3);
+    console.log(difficultyReeks);
+    let difficultyContent = "";
+    if(difficultyReeks.hasOwnProperty("easy") && difficultyReeks["easy"] >= id) {
+      difficultyContent= "easy";
+    }
+    else if(difficultyReeks.hasOwnProperty("medium") && difficultyReeks["medium"] >= id) {
+      difficultyContent = "medium";
+    }
+    else if(difficultyReeks.hasOwnProperty("hard") && difficultyReeks["hard"] >= id) {
+      difficultyContent = "hard";  
+    }
+
+    if (difficultyContent !== "") {
+      difficulty.textContent = difficultyContent;
+    }
+
     kaart.appendChild(image);
     kaart.appendChild(figcaption);
     kaart.appendChild(difficulty);
     kaart.setAttribute("key2", categorie);
 
-    difficulty.textContent = "medium";
+
 
     kaart.setAttribute("key", id);
     document.querySelector(".cards").appendChild(kaart);
@@ -194,7 +203,7 @@ window.onload = function () {
       };
       
       //we hebben het antwoord van de checkForWhichQuestions() functie terug,
-      //we zullen dus nu de juiste kaarten in de localStorage steken.
+      //we zullen dus nu de juiste vragen in de localStorage steken.
       let j = 1;
       if (vragenReeks.hasOwnProperty("easy")) {
         for (let i = 1;i <= 10;i++) {
@@ -248,24 +257,6 @@ window.onload = function () {
 
   }
 
-    // function getDifficulty(categorie, cardID) {
-    //   let som1 = Object.keys(data[categorie].easy).length;
-    //   let som2 = Object.keys(data[categorie].medium).length;
-    //   let som3 = Object.keys(data[categorie].hard).length;
-
-    //   let totaalAantalVragen = som1 + som2 + som3;
-
-    //   let questionsPerDifficulty = Math.ceil(totaalAantalVragen / 3);
-
-    //   if (cardID <= questionsPerDifficulty) {
-    //     return "easy";
-    //   } else if (cardID <= 2 * questionsPerDifficulty) {
-    //     return "medium";
-    //   } else {
-    //     return "hard";
-    //   }
-    // }
-
 
 
 
@@ -293,6 +284,29 @@ window.onload = function () {
       }
       return vraagReeks;
   }
+
+  // Deze onderstaande functie geeft de difficulty van de categorie terug.
+
+  const checkForDifficulty = (som1, som2, som3) => {
+    if (som1 < 10) {
+        som1 = 10;
+    }
+    if (som2 < 10) {
+        som2 = 10;
+    }
+    if (som3 < 10) {
+        som3 = 10;
+    }
+
+    let difficultyReeks = {};
+
+    difficultyReeks["easy"] = som1 / 10;
+    difficultyReeks["medium"] = (som2+som1) / 10;
+    difficultyReeks["hard"] =  (som2+som1+som3) / 10;
+    return difficultyReeks;
+}
+
+
   let color = JSON.parse(localStorage.getItem("user")).backgroundColor;
   document.body.style.backgroundColor = color;
 };

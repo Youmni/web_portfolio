@@ -1,100 +1,148 @@
 body {
-    padding: 0;
-    margin: 0;
-    background-color: #a7c6e7;
-    height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #a7c6e7;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: #013160;
+  color: white;
+  box-shadow: 0px 0px 10px rgb(98, 98, 98);
+  position: relative;
+}
+.nav-header ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+.nav-header ul a {
+  text-decoration: none;
+  color: white;
+}
+.login {
+  border-radius: 50%;
+  position: absolute;
+  top: 1.4rem;
+  right: 5rem;
+  cursor: pointer;
+}
+.login img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+}
+
+.titel-header {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.titel-header a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  background-color: #a7c6e7;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 5vh;
+  padding: 30vh 16rem 40vh 16rem;
+  background-color: rgb(241, 241, 241);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(98, 98, 98);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#btn {
+  position: absolute;
+  padding: 1.5rem 13rem 1.5rem 13rem;
+  bottom: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #757d7b;
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Noticia Text", serif;
+}
+#btn:hover {
+  background-color: #696a6a;
+  color: white;
+}
+#btn:active {
+  background-color: #5c9b86;
+  color: white;
+  transition: transform 0.1s ease;
+  transform: scale(0.9);
+}
+.titel-in-container {
+  position: absolute;
+  top: 2rem;
+  font-size: 3rem;
+  font-family: "Noticia Text", serif;
+  text-align: center;
+}
+.paragraaf-in-container {
+  position: absolute;
+  font-size: 1.5rem;
+  font-family: "Noticia Text", serif;
+  text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    flex-shrink: 1;
   }
   .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    background-color: #013160;
-    color: white;
-    box-shadow: 0px 0px 10px rgb(98, 98, 98);
-    position: relative;
+    flex-direction: row;
+    gap: 0rem;
+  }
+  .login {
+    display: none;
   }
   .nav-header ul {
-    display: flex;
-    list-style: none;
-    gap: 40px;
+    gap: 20px;
   }
-  .nav-header ul a {
-    text-decoration: none;
-    color: white;
-  }
-  .login{
-      border-radius: 50%;
-      position: absolute;
-      top: 1.4rem;
-      right: 5rem;
-      cursor: pointer;
-  }
-  .login img{
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      border: 1px solid #000000;
-  }
-  
   .titel-header {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-top: 1rem;
   }
-  .titel-header a {
-    text-decoration: none;
-    color: white;
+  .titel-main {
+    font-size: 2rem;
   }
-
-main{
-    background-color: #a7c6e7;
-    display: flex;
-    justify-content: center;
+  .text-main {
+    width: 90%;
+  }
+  .btn-login {
+    width: 15rem;
+    padding: 1rem;
+  }
 }
 
-.container{
-    margin-top: 5vh;
-    padding: 30vh 16rem 40vh 16rem;
-    background-color: rgb(241, 241, 241);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgb(98, 98, 98);   
-    top: 50%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-#btn{
-    position: absolute;
-    padding: 1.5rem 13rem 1.5rem 13rem;
-    bottom: 1rem;
-    border-radius: 15px;
-    cursor: pointer;
-    background-color: #757d7b;
-    color: white;
-    font-size: 1.5rem;
-    font-family: "Noticia Text", serif;
-
-}
-#btn:hover{
-    background-color: #696a6a;
-    color: white;
-    
-}
-#btn:active{
-    background-color: #5c9b86;
-    color: white;
-    transition: transform 0.1s ease;
-    transform: scale(0.9);
-}
-.titel-in-container{
-    position: absolute;
-    top: 2rem;
-    font-size: 3rem;
-    font-family: "Noticia Text", serif;
-    text-align: center;
-}
-.paragraaf-in-container{
-    position: absolute;
-    font-size: 1.5rem;
-    font-family: "Noticia Text", serif;
-    text-align: center;
+@media screen and (max-width: 580px) {
+  .header {
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .login {
+    display: none;
+  }
+  .nav-header ul {
+    gap: 20px;
+  }
+  .container{
+    padding: 16rem 12rem 20vh 12rem;
+  }
+  #btn{
+    padding: 1rem 9rem 1rem 9rem;
+    bottom: 1rem;;
+  }
 }

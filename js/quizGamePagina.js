@@ -7,6 +7,7 @@ window.onload = function () {
   const exit = document.getElementById("btn-exit");
   const timerElement = document.getElementById("timer");
   const sendBtn = document.getElementById("btn-send");
+  const popup = document.getElementById("end-quiz");
   let timerInterval = setInterval(updateTimer, 1000);
 
 
@@ -43,9 +44,13 @@ window.onload = function () {
     "../music/music10.mp3",
     "../music/music11.mp3",
   ];
+  
+const [audio1, audio2, ...resterendeAudios] = [...audios];
 
+console.log(`Deze file bevat jazz muziek: ${audio1}`);
+console.log(`Deze file bevat country muziek: ${audio2}`);
   //random kiezen uit de verschillende audio bestanden.
-  const r = Math.floor(Math.random() * audios.length);
+  const r = Math.floor(Math.random() * resterendeAudios.length);
   const audio = new Audio(audios[r]);
   let options = document.querySelectorAll(".options");
 
@@ -62,7 +67,15 @@ window.onload = function () {
     let p = document.createElement("p");
     p.classList.add("streak");
     p.id = `streak${i}`;
+    p.style.padding = "10px";
+    p.style.height = "10px";
+    p.style.width = "10px";
     p.setAttribute("key", `streak${i}`);
+    if(window.matchMedia("(max-width: 768px)").matches){
+      p.style.padding = "10px";
+      p.style.height = "5px";
+      p.style.width = "5px";
+    }
     scoreButtons.appendChild(p);
   }
 
@@ -151,15 +164,30 @@ window.onload = function () {
       quizInput(index); 
       resetTimer();
     } else {
-      finale();
+      finale(quizCompleted);
     }
   }
-console.log(JSON.parse(localStorage.getItem(`question${5}`)).incorrect_answers)
   //indien de laaste vraag beantwoord is zal deze functie aangeroepen worden/ het spel stopt.
-  function finale() {
+  function finale(callback) {
     localStorage.setItem("correctAnswers", correctAnswers);
     localStorage.setItem("totalQuestions", getNumberOfQuestions());
-    window.location.href ="scorePagina.html";
+
+    callback();
+  }
+
+  function quizCompleted(){
+
+    popup.style.display = "block";
+    document.getElementById("btn-results").addEventListener("click", function () {
+      window.location.href = "scorePagina.html";
+    });
+    document.getElementById("btn-back").addEventListener("click", function () {
+      window.location.href = "quizPagina.html";
+    });
+
+    setTimeout(function () {
+      window.location.href = "scorePagina.html";
+    }, 10000);
   }
 
   //zal luisteren naar het antwoord van de gebruiker.
@@ -240,7 +268,6 @@ console.log(JSON.parse(localStorage.getItem(`question${5}`)).incorrect_answers)
   
 
   quizInput(index);
-  updateTimer();
   let color = JSON.parse(localStorage.getItem("user")).backgroundColor;
   document.body.style.backgroundColor = color;
   document.getElementById("main").style.backgroundColor = color;

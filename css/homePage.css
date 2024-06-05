@@ -6,7 +6,7 @@ body {
     background: url(../photos/background-home13.avif);
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .header {
     display: flex;
@@ -18,36 +18,36 @@ body {
     box-shadow: 0px 0px 10px rgb(98, 98, 98);
     position: relative;
   }
-  .nav-header ul {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-  }
-  .nav-header ul a {
-    text-decoration: none;
-    color: white;
-  }
-  .login{
-      border-radius: 50%;
-      position: absolute;
-      top: 1.4rem;
-      right: 5rem;
-      cursor: pointer;
-  }
-  .login img{
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      border: 1px solid #000000;
-  }
-  
-  .titel-header {
-    font-family: Georgia, "Times New Roman", Times, serif;
-  }
-  .titel-header a {
-    text-decoration: none;
-    color: white;
-  }
+.nav-header ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+.nav-header ul a {
+  text-decoration: none;
+  color: white;
+}
+.login{
+    border-radius: 50%;
+    position: absolute;
+    top: 1.4rem;
+    right: 5rem;
+    cursor: pointer;
+}
+.login img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+
+.titel-header {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.titel-header a {
+  text-decoration: none;
+  color: white;
+}
 
   .titel-main {
     margin-top: 2rem;
@@ -126,4 +126,42 @@ main{
   bottom: 0;
   left:0;
   right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    background: url(../photos/background-home9.avif);
+  }
+  .header {
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .login{
+    display: none;
+}
+  .nav-header ul {
+    gap: 20px;
+  }
+  .titel-header {
+    margin-top: 1rem;
+  }
+  .titel-main {
+    font-size: 2rem;
+  }
+  .text-main {
+    width: 90%;
+  }
+  .btn-login {
+    width: 15rem;
+    padding: 1rem;
+  }
+  .testimonials {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .testimonial-block {
+    width: 80%;
+  }
+
+  
 }

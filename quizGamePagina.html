@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizley: loading</title>
+    <title>Quizley - quizzing</title>
     <link rel="icon" type="image/jpg" href="photos/quiz.jpg">
     <link rel="stylesheet" href="css/quizGamePagina.css">
 </head>
@@ -24,6 +24,16 @@
         <button class="options" id="option4">optie</button>
     </section>
 
+    <div id="end-quiz" class="end-quiz">
+        <img src="photos/accept_4315445.png" alt="accept image" width="100px">
+        <h1>Quiz has ended!</h1>
+        <div class="actions">
+            <button id="btn-results" class="btn-results">See the results?</button>
+            <button id="btn-back" class="btn-back">Go back?</button>
+        </div>
+        <p>You will be automaticly redirected to the results!</p>
+    </div>
+
     </div>
     <div class="action-btns">
     <button id="btn-exit" class="btn-exit">Exit</button>
@@ -32,7 +42,9 @@
     </div>
     </main>
 
+    <script src="js/gamePageResponsive.js"></script>
     <script src="js/quizGamePagina.js"></script>
+    
 <body>
     
 </body>

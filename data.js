@@ -1438,8 +1438,8 @@ const data = {
         difficulty: "easy",
         question:
           "In the 2012 film, &quot;The Lorax&quot;, who is the antagonist?",
-        correct_answer: "Aloysius O&#039;Hare",
-        incorrect_answers: ["Ted Wiggins", "The Once-Ler", "Grammy Norma"],
+        correct_answer: "Aloysius Hare",
+        incorrect_answers: ["Ted Wiggins", "The Once Ler", "Grammy Norma"],
       },
       question4: {
         type: "multiple",

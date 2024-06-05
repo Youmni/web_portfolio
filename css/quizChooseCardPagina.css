@@ -20,11 +20,12 @@ body {
     left: 55%;
     transform: translate(-50%, -50%);
     font-size: 2rem;
+    width: 20%;
     font-weight: bold;
     color: rgb(0, 0, 0);
     padding: 5rem;
-    text-align: center;
-    background-color: #faf7f7b0;
+    text-align: start;
+    background-color: #faf7f7;
     border-radius: 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
@@ -38,9 +39,61 @@ body {
   color: red;
   padding: 2rem;
   text-align: center;
-  background-color: #faf7f7b0;
+  background-color: #cecece;
   border-radius: 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.first-message span{
+  position: relative;
+}
+
+.first-message span::before{
+  content: "Good luck!!";
+  color: #2c6f8d;
+  animation: words 20s infinite;
+}
+.first-message span::after{
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  right: 0;
+  background-color: #faf7f7;
+  border-left: 2px solid #73b9ff;
+  animation: cursor .8s infinite, typing 20s steps(100) infinite;
+}
+
+@keyframes cursor {
+  to{
+      border-left: 0px solid rgb(82, 82, 82);
+  }
+}
+
+@keyframes words {
+  20%{
+      content: "Choose";
+  }
+
+  40%{
+      content: "Act";
+  }
+
+  60%{
+      content: "Master";
+  }
+  80%{
+      content: "Win";
+  }
+}
+
+@keyframes typing {
+
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+  }
 }
 
 #btn-noLogin{
@@ -55,66 +108,6 @@ body {
   font-weight: bold;
   text-align: center;
   border-radius: 5px;
-
-}
-.rain1 {
-  position: relative;
-  width: 20px; 
-  height: 40px;
-  margin: 0 auto;
-  height: 100vh;
-}
-
-.rain1::before {
-  content: "";
-  position: absolute;
-  width: 20px; 
-  height: 40px;
-  border-radius: 50%;
-  background: rgb(135, 188, 241);
-  top: -30px;
-  right: -150px;
-  animation: falling-raindrop 1s linear infinite;
-}
-
-@keyframes falling-raindrop {
-  0% {
-    transform: translateY(-30px) scale(1);
-  }
-  100% {
-    transform: translateY(100vh) scale(0.2);
-    opacity: 0;
-  }
-}
-
-.rain2 {
-  position: relative;
-  width: 20px; 
-  height: 40px;
-  margin: 0 auto;
-  height: 100vh;
-}
-
-.rain2::before {
-  content: "";
-  position: absolute;
-  width: 20px; 
-  height: 40px;
-  border-radius: 50%;
-  background: rgb(135, 188, 241);
-  top: -30px;
-  right: -320px;
-  animation: falling-raindrop2 1s linear infinite;
-}
-
-@keyframes falling-raindrop2 {
-  0% {
-    transform: translateY(-30px) scale(1);
-  }
-  100% {
-    transform: translateY(100vh) scale(0.2);
-    opacity: 0;
-  }
 }
 .defaultContainerCategorie{
   width: 100%;
@@ -123,98 +116,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #091522;
-}
-.rain3 {
-  position: relative;
-  width: 20px; 
-  height: 40px;
-  margin: 0 auto;
-  height: 100vh;
-}
-
-.rain3::before {
-  content: "";
-  position: absolute;
-  width: 20px; 
-  height: 40px;
-  border-radius: 50%;
-  background: rgb(135, 188, 241);
-  top: -30px;
-  right: -250px;
-  animation: falling-raindrop3 1s linear infinite;
-}
-
-@keyframes falling-raindrop3 {
-  0% {
-    transform: translateY(-30px) scale(1);
-  }
-  100% {
-    transform: translateY(100vh) scale(0.2);
-    opacity: 0;
-  }
-}
-
-.rain4 {
-  position: relative;
-  width: 20px; 
-  height: 40px;
-  margin: 0 auto;
-  height: 100vh;
-}
-
-.rain4::before {
-  content: "";
-  position: absolute;
-  width: 20px; 
-  height: 40px;
-  border-radius: 50%;
-  background: rgb(135, 188, 241);
-  top: -30px;
-  right: -300px;
-  animation: falling-raindrop4 1s linear infinite;
-}
-
-@keyframes falling-raindrop4 {
-  0% {
-    transform: translateY(-30px) scale(1);
-  }
-  100% {
-    transform: translateY(100vh) scale(0.2);
-    opacity: 0;
-  }
-}
-
-
-.rain5 {
-  position: relative;
-  width: 20px; 
-  height: 40px;
-  margin: 0 auto;
-  height: 100vh;
-}
-
-.rain5::before {
-  content: "";
-  position: absolute;
-  width: 20px; 
-  height: 40px;
-  border-radius: 50%;
-  background: rgb(135, 188, 241);
-  top: -30px;
-  right: -400px;
-  animation: falling-raindrop5 1s linear infinite;
-}
-
-@keyframes falling-raindrop5 {
-  0% {
-    transform: translateY(-30px) scale(1);
-  }
-  100% {
-    transform: translateY(100vh) scale(0.2);
-    opacity: 0;
-  }
-}
-.nav-header ul {
+}.nav-header ul {
   display: flex;
   list-style: none;
   gap: 40px;
@@ -247,6 +149,7 @@ img.login{
 .sidebar {
   border: 1px solid rgba(247, 247, 247, 0.553);
   width: 15rem;
+  height: 100vh;
   box-shadow: 0 0 6px grey;
 }
 .sidebar label {
@@ -258,6 +161,16 @@ img.login{
 .sidebar {
   background-color: #f0f0f0;
   padding: 20px;
+}
+#sidebar-btn-close-open{
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  background: black;
+  color: white;
+  font-size: 1rem;
+  border: 2px solid rgb(180, 180, 180);
+  cursor: pointer;
 }
 .sidebar h3 {
   color: #333;
@@ -326,10 +239,6 @@ img.login{
   opacity: 0.8;
 }
 
-.kaart {
-
-}
-
 .difficulty {
     position: absolute;
     top: 10px;
@@ -338,4 +247,69 @@ img.login{
     padding: 3px 6px 3px 6px;
     border-radius: 5px;
     font-size: 16px;
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .login{
+    display: none;
+}
+  .nav-header ul {
+    gap: 20px;
+  }
+  .titel-header {
+    margin-top: 1rem;
+  }
+  .titel-main {
+    font-size: 2rem;
+  }
+  .text-main {
+    width: 90%;
+  }
+  .btn-login {
+    width: 15rem;
+    padding: 1rem;
+  }
+  .cards{
+    display: none;
+  }
+  .sidebar {
+    width:100%;
+  }
+  .sidebar h3{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  #categorie-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #categorie-form input {
+    display: none;
+  }
+  #categorie-form label {
+    display: inline-block;
+    padding: 2rem;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 80%;
+    background-color: #50759d;
+    color: white;
+  }
+}
+  @media screen and (max-width: 850px) {
+    .first-message{
+      display: none;
+    }
+    .login{
+      display: none;
+    }
 }
