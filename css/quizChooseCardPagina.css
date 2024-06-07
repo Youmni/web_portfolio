@@ -14,22 +14,22 @@ body {
   box-shadow: 0px 0px 10px rgb(98, 98, 98);
   position: relative;
 }
-.first-message{
-    position: absolute;
-    top: 30%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    width: 20%;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    padding: 5rem;
-    text-align: start;
-    background-color: #faf7f7;
-    border-radius: 20px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+.first-message {
+  position: absolute;
+  top: 30%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  width: 20%;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  padding: 5rem;
+  text-align: start;
+  background-color: #faf7f7;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-.first-message-noLogin{
+.first-message-noLogin {
   position: absolute;
   top: 30%;
   left: 55%;
@@ -43,16 +43,16 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-.first-message span{
+.first-message span {
   position: relative;
 }
 
-.first-message span::before{
+.first-message span::before {
   content: "Good luck!!";
   color: #2c6f8d;
   animation: words 20s infinite;
 }
-.first-message span::after{
+.first-message span::after {
   content: "";
   position: absolute;
   width: calc(100% + 8px);
@@ -60,48 +60,64 @@ body {
   right: 0;
   background-color: #faf7f7;
   border-left: 2px solid #73b9ff;
-  animation: cursor .8s infinite, typing 20s steps(100) infinite;
+  animation: cursor 0.8s infinite, typing 20s steps(100) infinite;
 }
 
 @keyframes cursor {
-  to{
-      border-left: 0px solid rgb(82, 82, 82);
+  to {
+    border-left: 0px solid rgb(82, 82, 82);
   }
 }
 
 @keyframes words {
-  20%{
-      content: "Choose";
+  20% {
+    content: "Choose";
   }
 
-  40%{
-      content: "Act";
+  40% {
+    content: "Act";
   }
 
-  60%{
-      content: "Master";
+  60% {
+    content: "Master";
   }
-  80%{
-      content: "Win";
+  80% {
+    content: "Win";
   }
 }
 
 @keyframes typing {
-
-  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
-      width: 0;
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
   }
-  5%,20%,25%,40%,45%,60%,65%,80%,85%{
-      width: calc(100% + 8px);
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
   }
 }
 
-#btn-noLogin{
+#btn-noLogin {
   display: inline-block;
   padding: 10px 20px;
   cursor: pointer;
-  background-color: #0467d0; 
-  color: #fff; 
+  background-color: #0467d0;
+  color: #fff;
   font-size: 16px;
   text-decoration: none;
   border: none;
@@ -109,14 +125,15 @@ body {
   text-align: center;
   border-radius: 5px;
 }
-.defaultContainerCategorie{
+.defaultContainerCategorie {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #091522;
-}.nav-header ul {
+}
+.nav-header ul {
   display: flex;
   list-style: none;
   gap: 40px;
@@ -125,18 +142,18 @@ body {
   text-decoration: none;
   color: white;
 }
-.profile{
-    border-radius: 50%;
-    position: absolute;
-    top: 1.4rem;
-    right: 5rem;
-    cursor: pointer;
+.profile {
+  border-radius: 50%;
+  position: absolute;
+  top: 1.4rem;
+  right: 5rem;
+  cursor: pointer;
 }
-img.profile{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 1px solid #000000;
+img.profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #000000;
 }
 
 .titel-header {
@@ -161,7 +178,7 @@ img.profile{
   background-color: #f0f0f0;
   padding: 20px;
 }
-#sidebar-btn-close-open{
+#sidebar-btn-close-open {
   width: 100%;
   padding: 10px;
   border-radius: 15px;
@@ -239,13 +256,13 @@ img.profile{
 }
 
 .difficulty {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 3px 6px 3px 6px;
-    border-radius: 5px;
-    font-size: 16px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 3px 6px 3px 6px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 750px) {
@@ -253,9 +270,9 @@ img.profile{
     flex-direction: column;
     gap: 0rem;
   }
-  .login{
+  .login {
     display: none;
-}
+  }
   .nav-header ul {
     gap: 20px;
   }
@@ -272,13 +289,13 @@ img.profile{
     width: 15rem;
     padding: 1rem;
   }
-  .cards{
+  .cards {
     display: none;
   }
   .sidebar {
-    width:100%;
+    width: 100%;
   }
-  .sidebar h3{
+  .sidebar h3 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -287,7 +304,7 @@ img.profile{
     flex-direction: column;
     align-items: center;
   }
-  
+
   #categorie-form input {
     display: none;
   }
@@ -304,11 +321,16 @@ img.profile{
     color: white;
   }
 }
-  @media screen and (max-width: 850px) {
-    .first-message{
-      display: none;
-    }
-    .login{
-      display: none;
-    }
+@media screen and (max-width: 850px) {
+  .first-message {
+    display: none;
+  }
+  .login {
+    display: none;
+  }
+}
+@media screen and (min-height: 1000px) {
+  .sidebar {
+    height: 100vh;
+  }
 }
