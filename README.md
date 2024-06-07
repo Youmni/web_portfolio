@@ -56,7 +56,7 @@ web_portfolio/js/quizChooseCardPagina.js --> lijn 118
 web_portfolio/js/quizChooseCardPagina.js --> lijn 55-59 (fetch en .then), 90-99(afbeelding uit json wordt meegegeven aan de createcard functie), 132-178(in de functie wordt de kaart gemaakt met de afbeelding om weergegeven te worden)
 
 -Basis CSS Animatie:
-web_portfolio/css/quizChooseCardPagina.css --> lijn 66-97
+web_portfolio/css/quizChooseCardPagina.css --> lijn 66-113
 
 -Gebruiken van een flexbox of CSS grid:
 web_portfolio/css/quizChooseCardPagina.css --> lijn 8-11
