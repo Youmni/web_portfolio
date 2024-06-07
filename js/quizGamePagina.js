@@ -2,7 +2,7 @@ window.onload = function () {
 
   //gegevens ophalen.
   let timeLeft = 30;
-  let musicBtn = document.getElementById("music");
+  const musicBtn = document.getElementById("music");
   let showVolume = false;
   const exit = document.getElementById("btn-exit");
   const timerElement = document.getElementById("timer");

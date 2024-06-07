@@ -125,14 +125,14 @@ body {
   text-decoration: none;
   color: white;
 }
-.login{
+.profile{
     border-radius: 50%;
     position: absolute;
     top: 1.4rem;
     right: 5rem;
     cursor: pointer;
 }
-img.login{
+img.profile{
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -149,7 +149,6 @@ img.login{
 .sidebar {
   border: 1px solid rgba(247, 247, 247, 0.553);
   width: 15rem;
-  height: 100vh;
   box-shadow: 0 0 6px grey;
 }
 .sidebar label {

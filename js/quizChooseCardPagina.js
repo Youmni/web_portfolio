@@ -11,10 +11,10 @@ window.onload = function () {
 
   //waarden ophalen.
   const radioInputs = document.querySelectorAll(".sidebar input[type='radio']");
-  const accessKey = "zj8ISMmd3gz5xJRIin98bhscoGqn1iFsO21vvTF4Zlg";
   const cards = document.getElementById("cards");
   const reset = document.getElementById("reset-categorie");
   const profile = document.getElementById("profile");
+  const accessKey = "zj8ISMmd3gz5xJRIin98bhscoGqn1iFsO21vvTF4Zlg";
   let geselecteerdInput;
   let geselecteerdeCategorie;
 
@@ -32,7 +32,7 @@ window.onload = function () {
   });
     //luisteren naar het change event voor als we van categorie veranderen.
   radioInputs.forEach(function (input) {
-    input.addEventListener("change", () => {
+    input.addEventListener("change", function () {
       if(localStorage.getItem("user") === null){
        cards.innerHTML = "<div class='first-message-noLogin'><h3>You need to be logged in to play a quiz!</h3><button id='btn-noLogin'>Login / Registrate</button></div>";
         let btnNoLogin = document.getElementById("btn-noLogin");

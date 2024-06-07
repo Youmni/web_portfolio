@@ -25,14 +25,14 @@ body {
   text-decoration: none;
   color: white;
 }
-.login {
+.profile {
   border-radius: 50%;
   position: absolute;
   top: 1.4rem;
   right: 5rem;
   cursor: pointer;
 }
-.login img {
+.profile img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -47,7 +47,7 @@ body {
   color: white;
 }
 
-.QuizBackground{
+.quizBackground{
     width: 100%;
     height: 50vh;
     display: flex;
