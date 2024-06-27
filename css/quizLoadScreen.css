@@ -100,7 +100,7 @@ main {
 
 @media screen and (max-width: 850px) {
   .container {
-    flex-shrink: 1;
+    padding: 20rem 12rem 24vh 12rem;
   }
   .header {
     flex-direction: row;
@@ -121,9 +121,9 @@ main {
   .text-main {
     width: 90%;
   }
-  .btn-login {
-    width: 15rem;
-    padding: 1rem;
+  #btn{
+    padding: 1rem 9rem 1rem 9rem;
+    bottom: 1rem;;
   }
 }
 
